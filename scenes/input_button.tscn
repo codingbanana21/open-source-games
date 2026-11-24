@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cwuvufgsiuo06"]
+
+[ext_resource type="Script" uid="uid://cwgbk7l5irv46" path="res://scripts/InputButton.cs" id="1_xvydj"]
+
+[node name="InputButton" type="Button" unique_id=1884423491]
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(4, 4)
+text = "Jump"
+script = ExtResource("1_xvydj")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

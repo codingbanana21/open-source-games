@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://kwxw1bln6duw"]
+
+[ext_resource type="Script" uid="uid://f8p65cdtmyw" path="res://scripts/MainMenu.cs" id="1_l6cm7"]
+
+[node name="MainMenu" type="Node2D" unique_id=347918608]
+script = ExtResource("1_l6cm7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=412264223]
+
+[node name="Control" type="Control" parent="." unique_id=533649089]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlapBirdButton" type="Button" parent="Control" unique_id=492837259]
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 31.0
+text = "Flap Bird"
+
+[connection signal="pressed" from="Control/FlapBirdButton" to="." method="_on_flap_bird_button_pressed"]

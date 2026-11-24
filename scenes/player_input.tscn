@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dccb1qe2vr4a1"]
+
+[ext_resource type="PackedScene" uid="uid://cwuvufgsiuo06" path="res://scenes/input_button.tscn" id="1_l1alw"]
+
+[node name="PlayerInput" type="CanvasLayer" unique_id=592909456]
+
+[node name="InputButton" parent="." unique_id=1884423491 instance=ExtResource("1_l1alw")]
+offset_right = 49.0
+offset_bottom = 31.0
+
+[node name="InputButton2" parent="." unique_id=1972494964 instance=ExtResource("1_l1alw")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -196.0
+offset_right = -147.0
+offset_bottom = 31.0
+grow_horizontal = 0
+playerButtonNumber = 1
+
+[node name="InputButton3" parent="." unique_id=279417516 instance=ExtResource("1_l1alw")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -195.99988
+offset_top = -127.0
+offset_right = -146.99988
+offset_bottom = -96.0
+grow_horizontal = 0
+grow_vertical = 0
+playerButtonNumber = 2
+
+[node name="InputButton4" parent="." unique_id=127583556 instance=ExtResource("1_l1alw")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -125.99994
+offset_right = 50.0
+offset_bottom = -94.99988
+grow_vertical = 0
+playerButtonNumber = 3
