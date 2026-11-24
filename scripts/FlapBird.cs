@@ -2,11 +2,12 @@ using Godot;
 using System;
 using System.Threading.Tasks.Dataflow;
 
+[GlobalClass]
 public partial class FlapBird : CharacterBody2D
 {
     [Export]
-    private int playerNumber = 0;
-	Vector2 NewVelocity = Vector2.Zero;
+    public int playerNumber = 0;
+	public Vector2 NewVelocity = Vector2.Zero;
 
     private GameManager gameManager;
     public override void _Ready()

@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://itrv1wqy4mnu"]
 
+[ext_resource type="Script" uid="uid://bda1yjnfr028l" path="res://scripts/FlapBirdGame.cs" id="1_o3i7k"]
 [ext_resource type="PackedScene" uid="uid://c4m5hdyxq2ihs" path="res://scenes/flap_bird.tscn" id="1_spmtm"]
 [ext_resource type="PackedScene" uid="uid://dccb1qe2vr4a1" path="res://scenes/player_input.tscn" id="2_ak8al"]
 
 [node name="FlapBirdGame" type="Node2D" unique_id=214093687]
+script = ExtResource("1_o3i7k")
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1996461932]
+autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=907231887]
 zoom = Vector2(3, 3)
@@ -34,3 +39,5 @@ offset_bottom = 846.0
 color = Color(0.15686275, 0.58431375, 0.78431374, 1)
 
 [node name="PlayerInput" parent="." unique_id=592909456 instance=ExtResource("2_ak8al")]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
