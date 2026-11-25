@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://c4m5hdyxq2ihs"]
 
-[ext_resource type="Script" uid="uid://dx274ch7x08td" path="res://scripts/FlapBird.cs" id="1_d12bu"]
-[ext_resource type="Texture2D" uid="uid://ck2taw033ry0o" path="res://assets/images/chicken.png" id="2_8oy4h"]
+[ext_resource type="Script" uid="uid://dx274ch7x08td" path="res://scripts/flap_bird/FlapBird.cs" id="1_y4pq7"]
+[ext_resource type="Texture2D" uid="uid://ck2taw033ry0o" path="res://assets/images/chicken.png" id="2_m8lh2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8oy4h"]
 radius = 7.071068
 
 [node name="FlapBird" type="CharacterBody2D" unique_id=105090452]
-script = ExtResource("1_d12bu")
+script = ExtResource("1_y4pq7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416932344]
-texture = ExtResource("2_8oy4h")
+texture = ExtResource("2_m8lh2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=506515592]
 shape = SubResource("CircleShape2D_8oy4h")

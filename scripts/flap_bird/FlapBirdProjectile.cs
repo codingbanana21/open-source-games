@@ -4,11 +4,18 @@ using System;
 [GlobalClass]
 public partial class FlapBirdProjectile : Area2D
 {
+    [Export]
+    float speed = 100.0f;
+    [Export]
+    float knockback = 5.0f;
+    [Export]
+    int health = 1;
+
     public Vector2 NewVelocity = Vector2.Zero;
 
     public override void _Ready()
     {
-        NewVelocity.X = -100.0f;
+        NewVelocity.X = -speed;
     }
 
 	public override void _Process(double delta)
@@ -20,8 +27,13 @@ public partial class FlapBirdProjectile : Area2D
     {
         if(body is FlapBird flapBird)
         {
-            flapBird.NewVelocity.X = -5.0f;
-            QueueFree();
+            flapBird.NewVelocity.X = -knockback;
+            health--;
+
+            if(health <= 0)
+            {
+                QueueFree();
+            }
         }
     }
 }

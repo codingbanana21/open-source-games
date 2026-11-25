@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bgrhbk1m7ct1c"]
 
-[ext_resource type="Script" uid="uid://ch4qc2gquy3is" path="res://scripts/FlapBirdProjectile.cs" id="1_g67m0"]
-[ext_resource type="Texture2D" uid="uid://b8p7ft3j3p6c7" path="res://assets/images/rocket.png" id="1_gi5te"]
+[ext_resource type="Script" uid="uid://ch4qc2gquy3is" path="res://scripts/flap_bird/FlapBirdProjectile.cs" id="1_183nj"]
+[ext_resource type="Texture2D" uid="uid://b8p7ft3j3p6c7" path="res://assets/images/rocket.png" id="2_cnvcf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_upvgd"]
 radius = 5.0990195
 
-[node name="Projectile" type="Area2D" unique_id=1159395030]
-script = ExtResource("1_g67m0")
+[node name="Rocket" type="Area2D" unique_id=1159395030]
+script = ExtResource("1_183nj")
 
 [node name="Rocket" type="Sprite2D" parent="." unique_id=1915090700]
 rotation = 3.1415927
-texture = ExtResource("1_gi5te")
+texture = ExtResource("2_cnvcf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751321624]
 shape = SubResource("CircleShape2D_upvgd")
