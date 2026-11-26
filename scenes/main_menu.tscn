@@ -6,6 +6,7 @@
 script = ExtResource("1_l6cm7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=412264223]
+zoom = Vector2(4, 4)
 
 [node name="Control" type="Control" parent="." unique_id=533649089]
 layout_mode = 3
@@ -23,8 +24,28 @@ grow_vertical = 2
 
 [node name="FlapBirdButton" type="Button" parent="Control" unique_id=492837259]
 layout_mode = 0
-offset_right = 77.0
+offset_left = -18.0
+offset_right = 59.0
 offset_bottom = 31.0
 text = "Flap Bird"
 
+[node name="ChessTimer" type="Button" parent="Control" unique_id=819430300]
+layout_mode = 0
+offset_left = -31.0
+offset_top = 41.0
+offset_right = 72.0
+offset_bottom = 72.0
+text = "Chess Timer"
+
+[node name="Backgound" type="CanvasLayer" parent="." unique_id=1773702593]
+layer = -100
+
+[node name="ColorRect" type="ColorRect" parent="Backgound" unique_id=530272877]
+offset_left = -384.0
+offset_top = -190.0
+offset_right = 1652.0
+offset_bottom = 846.0
+color = Color(0.2503987, 0.17076704, 0.027690535, 1)
+
 [connection signal="pressed" from="Control/FlapBirdButton" to="." method="_on_flap_bird_button_pressed"]
+[connection signal="pressed" from="Control/ChessTimer" to="." method="_on_chess_timer_pressed"]

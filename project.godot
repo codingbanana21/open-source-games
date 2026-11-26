@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Open Source Games"
 config/tags=PackedStringArray("2d", "android")
-run/main_scene="uid://itrv1wqy4mnu"
+run/main_scene="uid://kwxw1bln6duw"
 config/features=PackedStringArray("4.7", "C#", "Mobile")
 config/icon="res://icon.svg"
 
@@ -28,6 +28,10 @@ window/stretch/aspect="expand"
 [dotnet]
 
 project/assembly_name="Open Source Games"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [input]
 

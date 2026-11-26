@@ -7,11 +7,11 @@
 [node name="FlapBirdGame" type="Node2D" unique_id=214093687]
 script = ExtResource("1_o3i7k")
 
-[node name="SpawnTimer" type="Timer" parent="." unique_id=1996461932]
-autostart = true
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=907231887]
 zoom = Vector2(3, 3)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1996461932]
+autostart = true
 
 [node name="FlapBird" parent="." unique_id=105090452 instance=ExtResource("1_spmtm")]
 position = Vector2(112, 0)

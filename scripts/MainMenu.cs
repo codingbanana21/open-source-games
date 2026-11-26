@@ -4,10 +4,12 @@ using System;
 [GlobalClass]
 public partial class MainMenu : Node2D
 {
-	[Export]
-	int hp = 100;
+	public void _on_flap_bird_button_pressed() {
+		GetTree().ChangeSceneToFile("res://scenes/flap_bird/flap_bird_game.tscn");
+	}
 
-	private void _on_flap_bird_button_pressed() {
-		GD.Print("Hello!");
+	public void _on_chess_timer_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/chess_timer/chess_timer_game.tscn");
 	}
 }
