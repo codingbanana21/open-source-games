@@ -25,17 +25,27 @@ grow_vertical = 2
 [node name="FlapBirdButton" type="Button" parent="Control" unique_id=492837259]
 layout_mode = 0
 offset_left = -18.0
+offset_top = -40.0
 offset_right = 59.0
-offset_bottom = 31.0
+offset_bottom = -9.0
 text = "Flap Bird"
 
 [node name="ChessTimer" type="Button" parent="Control" unique_id=819430300]
 layout_mode = 0
 offset_left = -31.0
+offset_top = 1.0
+offset_right = 72.0
+offset_bottom = 32.0
+text = "Chess Timer"
+
+[node name="Parkour" type="Button" parent="Control" unique_id=53938206]
+visible = false
+layout_mode = 0
+offset_left = -31.0
 offset_top = 41.0
 offset_right = 72.0
 offset_bottom = 72.0
-text = "Chess Timer"
+text = "Parkour"
 
 [node name="Backgound" type="CanvasLayer" parent="." unique_id=1773702593]
 layer = -100

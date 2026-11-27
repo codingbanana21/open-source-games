@@ -26,18 +26,18 @@ public partial class FlapBird : CharacterBody2D
 		}
 
 		// hit top screen
-		if (GlobalPosition.Y >= 100.0f) {
+		if (GlobalPosition.Y >= 110.0f) {
 			NewVelocity.Y = -3.5f;
-			NewVelocity.X = -4.0f;
+			NewVelocity.X = -3.0f;
 		}
 
 		// hit bottem screen
-		if (GlobalPosition.Y <= -100.0f) {
+		if (GlobalPosition.Y <= -110.0f) {
 			NewVelocity.Y = 1.5f;
-			NewVelocity.X = -4.0f;
+			NewVelocity.X = -3.0f;
 		}
 
-		if (GlobalPosition.X <= -180.0f) {
+		if (GlobalPosition.X <= -190.0f) {
 			QueueFree();
 		}
 

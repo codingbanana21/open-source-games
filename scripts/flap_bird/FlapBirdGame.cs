@@ -24,7 +24,7 @@ public partial class FlapBirdGame : Node2D
         var newProjectile = projectileScene.Instantiate<FlapBirdProjectile>();
         var position = newProjectile.GlobalPosition;
         position.X = 200.0f;
-        position.Y = GD.RandRange(-100, 100);
+        position.Y = (float)GD.RandRange(-110.0f, 110.0f);
         newProjectile.GlobalPosition = position;
         AddChild(newProjectile);
     }

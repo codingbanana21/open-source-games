@@ -21,6 +21,10 @@ public partial class FlapBirdProjectile : Area2D
 	public override void _Process(double delta)
     {
         GlobalPosition += NewVelocity * (float)delta;
+        
+        if (GlobalPosition.X <= -190.0f) {
+			QueueFree();
+		}
     }
 
     void _on_body_entered(Node2D body)
