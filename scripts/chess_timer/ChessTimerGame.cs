@@ -5,8 +5,8 @@ public partial class ChessTimerGame : Node2D
 {
     private enum TURN {PLAYER1, PLAYER2}
     
-    private Label timerLabel1;
-    private Label timerLabel2;
+    private LineEdit timerLineEdit1;
+    private LineEdit timerLineEdit2;
     private Button startStopButton;
 
     private float time1 = 300.0f;
@@ -16,54 +16,60 @@ public partial class ChessTimerGame : Node2D
 
     public override void _Ready()
     {
-        timerLabel1 = GetNode<Label>("TimerLabel1");
-        timerLabel2 = GetNode<Label>("TimerLabel2");
+        timerLineEdit1 = GetNode<LineEdit>("TimerLineEdit1");
+        timerLineEdit2 = GetNode<LineEdit>("TimerLineEdit2");
         startStopButton = GetNode<Button>("StartStopButton");
+        
+        timerLineEdit1.Text = ((int)time1).ToString();
+        timerLineEdit2.Text = ((int)time2).ToString();
     }
 
 	public override void _Process(double delta)
     {
-        timerLabel1.Text = ((int)time1).ToString();
-        timerLabel2.Text = ((int)time2).ToString();
-
-        if(running)
+        if (running)
         {
-            if(player_turn == TURN.PLAYER1) {
+            timerLineEdit1.Text = ((int)time1).ToString();
+            timerLineEdit2.Text = ((int)time2).ToString();
+
+            if (player_turn == TURN.PLAYER1) {
                 time1 -= 1.0f * (float)delta;
-                timerLabel1.Modulate = Color.Color8(255 ,0 ,0);
-                timerLabel2.Modulate = Color.Color8(255 ,255 ,255);
+                timerLineEdit1.Modulate = Color.Color8(255 ,0 ,0);
+                timerLineEdit2.Modulate = Color.Color8(255 ,255 ,255);
             }
             else
             {
                 time2 -= 1.0f * (float)delta;
-                timerLabel1.Modulate = Color.Color8(255 ,255 ,255);
-                timerLabel2.Modulate = Color.Color8(255 ,0 ,0);
+                timerLineEdit1.Modulate = Color.Color8(255 ,255 ,255);
+                timerLineEdit2.Modulate = Color.Color8(255 ,0 ,0);
             }
         }
         else
         {
-            if(player_turn == TURN.PLAYER1) {
-                timerLabel1.Modulate = Color.Color8(0,255 ,0);
-                timerLabel2.Modulate = Color.Color8(255 ,255 ,255);
+            // set the times to the text
+            if (float.TryParse(timerLineEdit1.Text, out float parsedTime1))
+                time1 = parsedTime1;
+
+            if (float.TryParse(timerLineEdit2.Text, out float parsedTime2))
+                time2 = parsedTime2;
+            
+            if (player_turn == TURN.PLAYER1) {
+                timerLineEdit1.Modulate = Color.Color8(0,255 ,0);
+                timerLineEdit2.Modulate = Color.Color8(255 ,255 ,255);
             }
             else
             {
-                timerLabel1.Modulate = Color.Color8(255 ,255 ,255);
-                timerLabel2.Modulate = Color.Color8(0,255 ,0);
+                timerLineEdit1.Modulate = Color.Color8(255 ,255 ,255);
+                timerLineEdit2.Modulate = Color.Color8(0,255 ,0);
             }
         }
     }
 
     public void _on_swich_button_pressed()
     {
-        if(player_turn == TURN.PLAYER1)
-        {
+        if (player_turn == TURN.PLAYER1)
             player_turn = TURN.PLAYER2;
-        }
         else
-        {
             player_turn = TURN.PLAYER1;
-        }
     }
 
     public void _on_start_stop_button_pressed()
@@ -71,12 +77,8 @@ public partial class ChessTimerGame : Node2D
         running = !running;
 
         if (running)
-        {
             startStopButton.Text = "Stop";
-        }
         else
-        {
             startStopButton.Text = "Start";
-        }
     }
 }

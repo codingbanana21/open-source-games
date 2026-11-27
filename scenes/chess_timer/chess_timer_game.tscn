@@ -8,21 +8,21 @@ script = ExtResource("1_umw6n")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1285566162]
 zoom = Vector2(4, 4)
 
-[node name="TimerLabel1" type="Label" parent="." unique_id=146401933]
-offset_left = -80.0
-offset_top = -13.0
-offset_right = -40.0
-offset_bottom = 10.0
+[node name="TimerLineEdit1" type="LineEdit" parent="." unique_id=828117605]
+offset_left = -112.0
+offset_top = -16.0
+offset_right = -43.5
+offset_bottom = 15.0
 text = "xxx"
-horizontal_alignment = 1
+alignment = 1
 
-[node name="TimerLabel2" type="Label" parent="." unique_id=1616236588]
-offset_left = 42.0
-offset_top = -13.0
-offset_right = 82.0
-offset_bottom = 10.0
+[node name="TimerLineEdit2" type="LineEdit" parent="." unique_id=1476445440]
+offset_left = 44.0
+offset_top = -15.0
+offset_right = 112.5
+offset_bottom = 16.0
 text = "xxx"
-horizontal_alignment = 1
+alignment = 1
 
 [node name="SwichButton" type="Button" parent="." unique_id=1094745274]
 offset_left = -26.0

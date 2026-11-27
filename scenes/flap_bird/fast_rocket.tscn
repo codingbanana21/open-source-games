@@ -1,12 +1,11 @@
 [gd_scene format=3 uid="uid://dnt2tyqkx2jt5"]
 
-[ext_resource type="PackedScene" uid="uid://bgrhbk1m7ct1c" path="res://scenes/flap_bird/fb_rocket.tscn" id="1_7dc4p"]
+[ext_resource type="PackedScene" uid="uid://bgrhbk1m7ct1c" path="res://scenes/flap_bird/rocket.tscn" id="1_7dc4p"]
 [ext_resource type="Texture2D" uid="uid://b30owt1kqta0x" path="res://assets/images/fast_rocket.png" id="2_e5c17"]
 
 [node name="FastRocket" unique_id=1159395030 instance=ExtResource("1_7dc4p")]
 speed = 250.0
 knockback = 3.0
-health = 3
 
 [node name="Rocket" parent="." index="0" unique_id=1915090700]
 texture = ExtResource("2_e5c17")

@@ -11,20 +11,25 @@ script = ExtResource("1_o3i7k")
 zoom = Vector2(3, 3)
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=1996461932]
+wait_time = 3.0
 autostart = true
 
 [node name="FlapBird" parent="." unique_id=105090452 instance=ExtResource("1_spmtm")]
+modulate = Color(1, 0, 0, 1)
 position = Vector2(112, 0)
 
 [node name="FlapBird2" parent="." unique_id=1411980101 instance=ExtResource("1_spmtm")]
+modulate = Color(0, 1, 1, 1)
 position = Vector2(112, 0)
 playerNumber = 1
 
 [node name="FlapBird3" parent="." unique_id=1551370641 instance=ExtResource("1_spmtm")]
+modulate = Color(0, 1, 0, 1)
 position = Vector2(112, 0)
 playerNumber = 2
 
 [node name="FlapBird4" parent="." unique_id=2056569166 instance=ExtResource("1_spmtm")]
+modulate = Color(1, 1, 0, 1)
 position = Vector2(112, 0)
 playerNumber = 3
 
