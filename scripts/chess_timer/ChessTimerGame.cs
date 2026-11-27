@@ -8,10 +8,11 @@ public partial class ChessTimerGame : Node2D
     private LineEdit timerLineEdit1;
     private LineEdit timerLineEdit2;
     private Button startStopButton;
+    private AudioStreamPlayer endAudioStreamPlayer;
 
     private float time1 = 300.0f;
     private float time2 = 300.0f;
-    private TURN player_turn = TURN.PLAYER1;
+    private TURN playerTurn = TURN.PLAYER1;
     private bool running = false;
 
     public override void _Ready()
@@ -19,6 +20,7 @@ public partial class ChessTimerGame : Node2D
         timerLineEdit1 = GetNode<LineEdit>("TimerLineEdit1");
         timerLineEdit2 = GetNode<LineEdit>("TimerLineEdit2");
         startStopButton = GetNode<Button>("StartStopButton");
+        endAudioStreamPlayer = GetNode<AudioStreamPlayer>("EndAudioStreamPlayer");
         
         timerLineEdit1.Text = ((int)time1).ToString();
         timerLineEdit2.Text = ((int)time2).ToString();
@@ -31,7 +33,12 @@ public partial class ChessTimerGame : Node2D
             timerLineEdit1.Text = ((int)time1).ToString();
             timerLineEdit2.Text = ((int)time2).ToString();
 
-            if (player_turn == TURN.PLAYER1) {
+            if (time1 <= 0.0f || time2 <= 0.0f) {
+                running = false;
+                endAudioStreamPlayer.Play();
+            }
+
+            if (playerTurn == TURN.PLAYER1) {
                 time1 -= 1.0f * (float)delta;
                 timerLineEdit1.Modulate = Color.Color8(255 ,0 ,0);
                 timerLineEdit2.Modulate = Color.Color8(255 ,255 ,255);
@@ -52,7 +59,7 @@ public partial class ChessTimerGame : Node2D
             if (float.TryParse(timerLineEdit2.Text, out float parsedTime2))
                 time2 = parsedTime2;
             
-            if (player_turn == TURN.PLAYER1) {
+            if (playerTurn == TURN.PLAYER1) {
                 timerLineEdit1.Modulate = Color.Color8(0,255 ,0);
                 timerLineEdit2.Modulate = Color.Color8(255 ,255 ,255);
             }
@@ -66,10 +73,10 @@ public partial class ChessTimerGame : Node2D
 
     public void _on_swich_button_pressed()
     {
-        if (player_turn == TURN.PLAYER1)
-            player_turn = TURN.PLAYER2;
+        if (playerTurn == TURN.PLAYER1)
+            playerTurn = TURN.PLAYER2;
         else
-            player_turn = TURN.PLAYER1;
+            playerTurn = TURN.PLAYER1;
     }
 
     public void _on_start_stop_button_pressed()

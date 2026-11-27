@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c70wg0eejfvc5"]
 
 [ext_resource type="Script" uid="uid://bagrisvre21pj" path="res://scripts/chess_timer/ChessTimerGame.cs" id="1_umw6n"]
+[ext_resource type="AudioStream" uid="uid://cbp0gnvxap6m5" path="res://assets/sound/doorbell-old-tring.ogg" id="2_wlxtx"]
 
 [node name="ChessTimerGame" type="Node2D" unique_id=1206746848]
 script = ExtResource("1_umw6n")
@@ -8,34 +9,67 @@ script = ExtResource("1_umw6n")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1285566162]
 zoom = Vector2(4, 4)
 
+[node name="EndAudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1292314928]
+stream = ExtResource("2_wlxtx")
+
 [node name="TimerLineEdit1" type="LineEdit" parent="." unique_id=828117605]
-offset_left = -112.0
-offset_top = -16.0
-offset_right = -43.5
-offset_bottom = 15.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.25
+offset_top = -34.5
+offset_right = 2.25
+offset_bottom = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
 text = "xxx"
 alignment = 1
 
 [node name="TimerLineEdit2" type="LineEdit" parent="." unique_id=1476445440]
-offset_left = 44.0
-offset_top = -15.0
-offset_right = 112.5
-offset_bottom = 16.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 77.75
+offset_top = 34.5
+offset_right = 146.25
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 4.712389
 text = "xxx"
 alignment = 1
 
 [node name="SwichButton" type="Button" parent="." unique_id=1094745274]
-offset_left = -26.0
-offset_top = -16.0
-offset_right = 27.0
-offset_bottom = 15.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -15.5
+offset_right = 26.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Swich"
 
 [node name="StartStopButton" type="Button" parent="." unique_id=712804635]
-offset_left = -26.0
-offset_top = -56.0
-offset_right = 27.0
-offset_bottom = -25.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.5
+offset_top = -55.5
+offset_right = 26.5
+offset_bottom = -24.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Start"
 
 [node name="Backgound" type="CanvasLayer" parent="." unique_id=93029411]
@@ -43,9 +77,9 @@ layer = -100
 
 [node name="ColorRect" type="ColorRect" parent="Backgound" unique_id=60146651]
 offset_left = -384.0
-offset_top = -190.0
+offset_top = -182.0
 offset_right = 1652.0
-offset_bottom = 846.0
+offset_bottom = 854.0
 color = Color(0.2509804, 0.17254902, 0.02745098, 1)
 
 [connection signal="pressed" from="SwichButton" to="." method="_on_swich_button_pressed"]
