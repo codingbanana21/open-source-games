@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://ch4qc2gquy3is" path="res://scripts/flap_bird/FlapBirdProjectile.cs" id="1_183nj"]
 [ext_resource type="Texture2D" uid="uid://b8p7ft3j3p6c7" path="res://assets/images/rocket.png" id="2_cnvcf"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_upvgd"]
-radius = 5.0990195
+[sub_resource type="CircleShape2D" id="CircleShape2D_161wm"]
+radius = 6.0
 
 [node name="Rocket" type="Area2D" unique_id=1159395030]
 script = ExtResource("1_183nj")
@@ -14,6 +14,6 @@ rotation = 3.1415927
 texture = ExtResource("2_cnvcf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=751321624]
-shape = SubResource("CircleShape2D_upvgd")
+shape = SubResource("CircleShape2D_161wm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

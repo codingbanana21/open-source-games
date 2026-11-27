@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bj674x8t7a1gx"]
+
+[ext_resource type="PackedScene" uid="uid://bgrhbk1m7ct1c" path="res://scenes/flap_bird/rocket.tscn" id="1_kkoty"]
+[ext_resource type="Texture2D" uid="uid://wx7lkq3si4tn" path="res://assets/images/big_rocket.png" id="2_oceda"]
+
+[node name="BigRocket" unique_id=1159395030 instance=ExtResource("1_kkoty")]
+scale = Vector2(3, 3)
+knockback = 8.0
+
+[node name="Rocket" parent="." index="0" unique_id=1915090700]
+texture = ExtResource("2_oceda")

@@ -25,13 +25,13 @@ public partial class FlapBird : CharacterBody2D
 			NewVelocity.Y = -4.0f;
 		}
 
-		// hit top screen
-		if (GlobalPosition.Y >= 110.0f) {
+		// hit bottem screen
+		if (GlobalPosition.Y >= 80.0f) {
 			NewVelocity.Y = -3.5f;
 			NewVelocity.X = -3.0f;
 		}
 
-		// hit bottem screen
+		// hit top screen
 		if (GlobalPosition.Y <= -110.0f) {
 			NewVelocity.Y = 1.5f;
 			NewVelocity.X = -3.0f;

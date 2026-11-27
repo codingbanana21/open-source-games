@@ -55,7 +55,7 @@ offset_left = -384.0
 offset_top = -190.0
 offset_right = 1652.0
 offset_bottom = 846.0
-color = Color(0.2503987, 0.17076704, 0.027690535, 1)
+color = Color(0.2509804, 0.45490196, 0.6431373, 1)
 
 [connection signal="pressed" from="Control/FlapBirdButton" to="." method="_on_flap_bird_button_pressed"]
 [connection signal="pressed" from="Control/ChessTimer" to="." method="_on_chess_timer_pressed"]
