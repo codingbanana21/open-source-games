@@ -12,4 +12,9 @@ public partial class MainMenu : Node2D
 	{
 		GetTree().ChangeSceneToFile("res://scenes/chess_timer/chess_timer_game.tscn");
 	}
+
+	public void _on_parkour_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://scenes/parkour_game/parkour_game.tscn");
+	}
 }

@@ -7,7 +7,7 @@ public partial class FlapBirdProjectile : Area2D
     [Export]
     float speed = 100.0f;
     [Export]
-    float knockback = 4.0f;
+    float knockback = 240.0f;
     [Export]
     int health = 1;
 

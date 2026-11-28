@@ -5,6 +5,7 @@
 
 [node name="HardRocket" unique_id=1159395030 instance=ExtResource("1_px6kq")]
 speed = 50.0
+knockback = 120.0
 health = 3
 
 [node name="Rocket" parent="." index="0" unique_id=1915090700]

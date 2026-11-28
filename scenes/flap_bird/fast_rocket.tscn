@@ -5,7 +5,7 @@
 
 [node name="FastRocket" unique_id=1159395030 instance=ExtResource("1_7dc4p")]
 speed = 250.0
-knockback = 3.0
+knockback = 180.0
 
 [node name="Rocket" parent="." index="0" unique_id=1915090700]
 texture = ExtResource("2_e5c17")

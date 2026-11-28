@@ -17,24 +17,25 @@ public partial class FlapBird : CharacterBody2D
 
 	public override void _Process(double delta)
 	{
-		if (NewVelocity.Y <= 5.0f) NewVelocity.Y += 7.0f * (float)delta;
+		if (NewVelocity.Y <= 300.0f) NewVelocity.Y += 400.0f * (float)delta;
 
+		// jumping
 		if (gameManager.Inputs[playerNumber])
 		{
 			gameManager.Inputs[playerNumber] = false;
-			NewVelocity.Y = -4.0f;
+			NewVelocity.Y = -240.0f;
 		}
 
 		// hit bottem screen
 		if (GlobalPosition.Y >= 80.0f) {
-			NewVelocity.Y = -3.5f;
-			NewVelocity.X = -3.0f;
+			NewVelocity.Y = -200.0f;
+			NewVelocity.X = -180.0f;
 		}
 
 		// hit top screen
 		if (GlobalPosition.Y <= -110.0f) {
-			NewVelocity.Y = 1.5f;
-			NewVelocity.X = -3.0f;
+			NewVelocity.Y = 100.0f;
+			NewVelocity.X = -180.0f;
 		}
 
 		if (GlobalPosition.X <= -190.0f) {
@@ -42,7 +43,9 @@ public partial class FlapBird : CharacterBody2D
 		}
 
 		NewVelocity.X *= 0.95f;
-		GlobalPosition += NewVelocity;
-		Rotation = NewVelocity.Y / 10.0f;
+		Velocity = NewVelocity;
+        MoveAndSlide();
+
+		Rotation = Velocity.Y / 600.0f;
 	}
 }

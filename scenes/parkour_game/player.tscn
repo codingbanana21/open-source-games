@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://chbu0ta4bhk12"]
+
+[ext_resource type="Script" uid="uid://co42q3ot65na7" path="res://scripts/parkour_game/Player.cs" id="1_h8fgd"]
+[ext_resource type="Texture2D" uid="uid://ck2taw033ry0o" path="res://assets/images/chicken.png" id="1_l8tjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upvgd"]
+size = Vector2(10, 11)
+
+[node name="Player" type="CharacterBody2D" unique_id=741459125]
+script = ExtResource("1_h8fgd")
+
+[node name="Chicken" type="Sprite2D" parent="." unique_id=86485857]
+texture = ExtResource("1_l8tjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1688623183]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_upvgd")

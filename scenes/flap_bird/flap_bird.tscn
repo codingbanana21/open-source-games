@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ck2taw033ry0o" path="res://assets/images/chicken.png" id="2_m8lh2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8oy4h"]
-radius = 7.071068
+radius = 6.0
 
 [node name="FlapBird" type="CharacterBody2D" unique_id=105090452]
+collision_mask = 0
 script = ExtResource("1_y4pq7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416932344]
